@@ -1,0 +1,152 @@
+{
+  "common": {
+    "language": "Language",
+    "taxCalculator": "Tax Calculator",
+    "compare": "Compare",
+    "save": "Save",
+    "cancel": "Cancel",
+    "add": "Add",
+    "remove": "Remove",
+    "edit": "Edit",
+    "loading": "Loading..."
+  },
+  "navigation": {
+    "calculator": "Calculator",
+    "comparison": "Comparison",
+    "export": "Export",
+    "taxYears": "Tax Years",
+    "benefits": "Benefits",
+    "forms": "Forms"
+  },
+  "calculator": {
+    "income": "Income",
+    "taxCode": "Tax Code",
+    "annualSalary": "Annual Salary",
+    "monthlyBreakdown": "Monthly Breakdown",
+    "weeklyBreakdown": "Weekly Breakdown",
+    "monthlyBreakdownTooltip": "Shows your monthly income, deductions, and take-home pay. Each row represents one month of the tax year (April to March). Click on a month to see cumulative calculations up to that point.",
+    "weeklyBreakdownTooltip": "Shows your weekly income, deductions, and take-home pay. Each row represents one week of the tax year. Click on a week to see cumulative calculations up to that point.",
+    "taxBreakdown": "Tax Breakdown",
+    "taxBreakdownTooltip": "{{type}} shows how your income is taxed at different rates. Each band represents a portion of your income that is taxed at a specific rate.",
+    "grossPay": "Gross Pay",
+    "netPay": "Net Pay",
+    "incomeTax": "Income Tax",
+    "nationalInsurance": "National Insurance",
+    "total": "Total",
+    "totalDeductions": "Total Deductions",
+    "grossAnnualSalary": "Gross Annual Salary",
+    "netAnnualIncome": "Net Annual Income",
+    "annualSummary": "Annual Summary",
+    "annualSummaryTooltip": "A summary of your annual earnings, total deductions (Income Tax + National Insurance), and final take-home pay. These figures represent your total income and deductions for the full tax year.",
+    "month": "Month",
+    "monthNumber": "Month #",
+    "taxFree": "Tax-Free",
+    "taxable": "Taxable",
+    "band": "Band",
+    "rate": "Rate",
+    "from": "From",
+    "to": "To",
+    "amountInBand": "Amount in Band",
+    "tax": "Tax",
+    "noLimit": "No limit",
+    "verificationCalculator": {
+      "title": "Tax Verification Calculator",
+      "description": "Check if you've paid the correct amount of tax for a specific period",
+      "amountEarned": "Amount Earned",
+      "periodType": "Period Type",
+      "periodNumber": "Period Number",
+      "taxFreeAmount": "Tax-Free Amount",
+      "taxableAmount": "Taxable Amount",
+      "expectedTax": "Expected Tax",
+      "taxCodeUsed": "Tax Code Used",
+      "bandBreakdown": "Tax Band Breakdown"
+    }
+  },
+  "months": {
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December",
+    "january": "January",
+    "february": "February",
+    "march": "March"
+  },
+  "taxBands": {
+    "personalallowance": "Personal Allowance",
+    "basicrate": "Basic Rate",
+    "higherrate": "Higher Rate",
+    "additionalrate": "Additional Rate",
+    "starterrate": "Starter Rate",
+    "intermediaterate": "Intermediate Rate",
+    "toprate": "Top Rate",
+    "belowprimarythreshold": "Below Primary Threshold",
+    "mainrate": "Main Rate",
+    "higherrate": "Higher Rate"
+  },
+  "scenarios": {
+    "title": "Income Comparison",
+    "addScenario": "Add Scenario",
+    "editScenario": "Edit Scenario",
+    "scenarioName": "Scenario Name",
+    "current": "Current"
+  },
+  "export": {
+    "title": "Export Tax Calculations",
+    "downloadCSV": "Download CSV",
+    "downloadPDF": "Download PDF"
+  },
+  "taxTips": {
+    "title": "Tax Saving Tips",
+    "pensionContributions": "Pension Contributions",
+    "pensionTip": "Contributing to a pension can reduce your taxable income and help you save for retirement.",
+    "marriageAllowance": "Marriage Allowance",
+    "marriageTip": "You could transfer £1,260 of your Personal Allowance to your spouse or civil partner.",
+    "charityDonations": "Charity Donations",
+    "charityTip": "Gift Aid donations can reduce your tax bill if you're a higher or additional rate taxpayer."
+  },
+  "chat": {
+    "welcome": "Hello! I'm your HMRC Tax Calculator assistant. How can I help you today?",
+    "placeholder": "Type your message..."
+  },
+  "forms": {
+    "title": "Tax Forms and Documents",
+    "description": "Access and download important tax forms and documents",
+    "p87": {
+      "title": "P87 Form - Tax Relief for Employment Expenses",
+      "description": "Use this form to claim tax relief for employment expenses",
+      "details": "You can claim for the current tax year and the previous 4 tax years",
+      "eligible": "You can claim for:",
+      "eligibleItems": [
+        "Working from home expenses",
+        "Uniform cleaning and maintenance",
+        "Professional subscriptions",
+        "Travel and accommodation for work",
+        "Tools and equipment for your job"
+      ],
+      "ineligible": "You cannot claim for:",
+      "ineligibleItems": [
+        "Personal expenses",
+        "Commuting to your regular workplace",
+        "Items your employer has already reimbursed you for",
+        "Items provided by your employer"
+      ],
+      "buttonText": "Claim Online",
+      "downloadText": "Download P87 Form (PDF)"
+    },
+    "p60": {
+      "title": "P60 End of Year Certificate",
+      "description": "Shows the total amount of pay and tax deducted in the tax year",
+      "details": "Your employer must give you a P60 by 31 May if you were employed by them on the last day of the tax year (5 April)"
+    },
+    "p45": {
+      "title": "P45 Form",
+      "description": "Shows how much you've been paid and how much tax you've paid so far in the tax year",
+      "details": "You get a P45 when you stop working for an employer. Give it to your new employer when you change jobs"
+    }
+  }
+}

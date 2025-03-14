@@ -1,0 +1,152 @@
+{
+  "common": {
+    "language": "Iaith",
+    "taxCalculator": "Cyfrifiannell Treth",
+    "compare": "Cymharu",
+    "save": "Cadw",
+    "cancel": "Canslo",
+    "add": "Ychwanegu",
+    "remove": "Dileu",
+    "edit": "Golygu",
+    "loading": "Llwytho..."
+  },
+  "navigation": {
+    "calculator": "Cyfrifiannell",
+    "comparison": "Cymharu",
+    "export": "Allforio",
+    "taxYears": "Blynyddoedd Treth",
+    "benefits": "Budd-daliadau",
+    "forms": "Ffurflenni"
+  },
+  "calculator": {
+    "income": "Incwm",
+    "taxCode": "Cod Treth",
+    "annualSalary": "Cyflog Blynyddol",
+    "monthlyBreakdown": "Dadansoddiad Misol",
+    "weeklyBreakdown": "Dadansoddiad Wythnosol",
+    "monthlyBreakdownTooltip": "Yn dangos eich incwm misol, didyniadau, a thâl cartref. Mae pob rhes yn cynrychioli un mis o'r flwyddyn dreth (Ebrill i Fawrth). Cliciwch ar fis i weld cyfrifiadau cronnus hyd at y pwynt hwnnw.",
+    "weeklyBreakdownTooltip": "Yn dangos eich incwm wythnosol, didyniadau, a thâl cartref. Mae pob rhes yn cynrychioli un wythnos o'r flwyddyn dreth. Cliciwch ar wythnos i weld cyfrifiadau cronnus hyd at y pwynt hwnnw.",
+    "taxBreakdown": "Dadansoddiad Treth",
+    "taxBreakdownTooltip": "Mae {{type}} yn dangos sut mae eich incwm yn cael ei drethu ar wahanol gyfraddau. Mae pob band yn cynrychioli rhan o'ch incwm sy'n cael ei drethu ar gyfradd benodol.",
+    "grossPay": "Tâl Gros",
+    "netPay": "Tâl Net",
+    "incomeTax": "Treth Incwm",
+    "nationalInsurance": "Yswiriant Gwladol",
+    "total": "Cyfanswm",
+    "totalDeductions": "Cyfanswm Didyniadau",
+    "grossAnnualSalary": "Cyflog Blynyddol Gros",
+    "netAnnualIncome": "Incwm Blynyddol Net",
+    "annualSummary": "Crynodeb Blynyddol",
+    "annualSummaryTooltip": "Crynodeb o'ch enillion blynyddol, cyfanswm didyniadau (Treth Incwm + Yswiriant Gwladol), a thâl cartref terfynol. Mae'r ffigurau hyn yn cynrychioli'ch incwm a didyniadau ar gyfer y flwyddyn dreth lawn.",
+    "month": "Mis",
+    "monthNumber": "Rhif Mis",
+    "taxFree": "Di-dreth",
+    "taxable": "Trethadwy",
+    "band": "Band",
+    "rate": "Cyfradd",
+    "from": "O",
+    "to": "I",
+    "amountInBand": "Swm yn y Band",
+    "tax": "Treth",
+    "noLimit": "Dim terfyn",
+    "verificationCalculator": {
+      "title": "Cyfrifiannell Dilysu Treth",
+      "description": "Gwiriwch a ydych wedi talu'r swm cywir o dreth ar gyfer cyfnod penodol",
+      "amountEarned": "Swm Enillion",
+      "periodType": "Math o Gyfnod",
+      "periodNumber": "Rhif Cyfnod",
+      "taxFreeAmount": "Swm Di-dreth",
+      "taxableAmount": "Swm Trethadwy",
+      "expectedTax": "Treth Disgwyliedig",
+      "taxCodeUsed": "Cod Treth a Ddefnyddir",
+      "bandBreakdown": "Dadansoddiad Band Treth"
+    }
+  },
+  "months": {
+    "april": "Ebrill",
+    "may": "Mai",
+    "june": "Mehefin",
+    "july": "Gorffennaf",
+    "august": "Awst",
+    "september": "Medi",
+    "october": "Hydref",
+    "november": "Tachwedd",
+    "december": "Rhagfyr",
+    "january": "Ionawr",
+    "february": "Chwefror",
+    "march": "Mawrth"
+  },
+  "taxBands": {
+    "personalallowance": "Lwfans Personol",
+    "basicrate": "Cyfradd Sylfaenol",
+    "higherrate": "Cyfradd Uwch",
+    "additionalrate": "Cyfradd Ychwanegol",
+    "starterrate": "Cyfradd Gychwynnol",
+    "intermediaterate": "Cyfradd Ganolradd",
+    "toprate": "Cyfradd Uchaf",
+    "belowprimarythreshold": "Islaw'r Trothwy Sylfaenol",
+    "mainrate": "Prif Gyfradd",
+    "higherrate": "Cyfradd Uwch"
+  },
+  "scenarios": {
+    "title": "Cymharu Incwm",
+    "addScenario": "Ychwanegu Senario",
+    "editScenario": "Golygu Senario",
+    "scenarioName": "Enw Senario",
+    "current": "Cyfredol"
+  },
+  "export": {
+    "title": "Allforio Cyfrifiadau Treth",
+    "downloadCSV": "Lawrlwytho CSV",
+    "downloadPDF": "Lawrlwytho PDF"
+  },
+  "taxTips": {
+    "title": "Awgrymiadau Arbed Treth",
+    "pensionContributions": "Cyfraniadau Pensiwn",
+    "pensionTip": "Gall cyfrannu i bensiwn leihau eich incwm trethadwy a'ch helpu i gynilo ar gyfer ymddeoliad.",
+    "marriageAllowance": "Lwfans Priodas",
+    "marriageTip": "Gallech drosglwyddo £1,260 o'ch Lwfans Personol i'ch priod neu bartner sifil.",
+    "charityDonations": "Rhoddion Elusennol",
+    "charityTip": "Gall rhoddion Cymorth Rhodd leihau eich bil treth os ydych yn drethdalwr cyfradd uwch neu ychwanegol."
+  },
+  "chat": {
+    "welcome": "Helo! Fi yw'ch cynorthwyydd Cyfrifiannell Treth CThEM. Sut allaf i helpu heddiw?",
+    "placeholder": "Teipiwch eich neges..."
+  },
+  "forms": {
+    "title": "Ffurflenni a Dogfennau Treth",
+    "description": "Mynediad a lawrlwytho ffurflenni a dogfennau treth pwysig",
+    "p87": {
+      "title": "Ffurflen P87 - Rhyddhad Treth ar gyfer Treuliau Cyflogaeth",
+      "description": "Defnyddiwch y ffurflen hon i hawlio rhyddhad treth ar gyfer treuliau cyflogaeth",
+      "details": "Gallwch hawlio ar gyfer y flwyddyn dreth gyfredol a'r 4 blynedd dreth flaenorol",
+      "eligible": "Gallwch hawlio ar gyfer:",
+      "eligibleItems": [
+        "Treuliau gweithio o gartref",
+        "Glanhau a chynnal-a-chadw gwisg unffurf",
+        "Tanysgrifiadau proffesiynol",
+        "Teithio a llety ar gyfer gwaith",
+        "Offer a chyfarpar ar gyfer eich swydd"
+      ],
+      "ineligible": "Ni allwch hawlio ar gyfer:",
+      "ineligibleItems": [
+        "Treuliau personol",
+        "Cymudo i'ch gweithle arferol",
+        "Eitemau y mae eich cyflogwr eisoes wedi ad-dalu i chi amdanynt",
+        "Eitemau a ddarperir gan eich cyflogwr"
+      ],
+      "buttonText": "Hawlio Ar-lein",
+      "downloadText": "Lawrlwytho Ffurflen P87 (PDF)"
+    },
+    "p60": {
+      "title": "Tystysgrif Diwedd Blwyddyn P60",
+      "description": "Yn dangos cyfanswm y cyflog a'r dreth a ddidynnwyd yn y flwyddyn dreth",
+      "details": "Rhaid i'ch cyflogwr roi P60 i chi erbyn 31 Mai os oeddech yn gyflogedig ganddynt ar ddiwrnod olaf y flwyddyn dreth (5 Ebrill)"
+    },
+    "p45": {
+      "title": "Ffurflen P45",
+      "description": "Yn dangos faint rydych chi wedi'i gael eich talu a faint o dreth rydych chi wedi'i thalu hyd yn hyn yn y flwyddyn dreth",
+      "details": "Rydych yn cael P45 pan fyddwch yn rhoi'r gorau i weithio i gyflogwr. Rhowch ef i'ch cyflogwr newydd pan fyddwch yn newid swyddi"
+    }
+  }
+}

@@ -1,0 +1,270 @@
+/* Calculator container styles */
+.calculator-container {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 1px solid rgb(229, 231, 235);
+  overflow: hidden;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.dark .calculator-container {
+  background-color: rgb(31, 41, 55);
+  border-color: rgb(55, 65, 81);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+}
+
+/* Calculator header with gradient */
+.calculator-header {
+  background: linear-gradient(135deg, #008476 0%, #006c68 100%);
+  color: white;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  position: relative;
+  z-index: 1;
+}
+
+.calculator-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.calculator-header button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.calculator-header button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* Enhanced calculator display */
+.calculator-display {
+  width: 100%;
+  min-height: 5rem;
+  background: linear-gradient(to bottom, #f3f4f6 0%, #e5e7eb 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .calculator-display {
+  background: linear-gradient(to bottom, #374151 0%, #1f2937 100%);
+  color: white;
+}
+
+.calculator-display-value {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: all 0.2s ease;
+}
+
+.calculator-display-expression {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.calculator-display.error {
+  color: #ef4444;
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Improved keypad layout */
+.calculator-keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+}
+
+.dark .calculator-keypad {
+  background-color: rgb(31, 41, 55);
+}
+
+/* Enhanced button styles */
+.calculator-button {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  color: #1f2937;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
+}
+
+.dark .calculator-button {
+  background-color: #4b5563;
+  border-color: #374151;
+  color: white;
+}
+
+.calculator-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+}
+
+.calculator-button:active {
+  transform: translateY(1px);
+}
+
+/* Operator buttons with gradient */
+.calculator-button.operator {
+  background: linear-gradient(135deg, #008476 0%, #006c68 100%);
+  color: white;
+  border: none;
+}
+
+.calculator-button.operator:hover {
+  background: linear-gradient(135deg, #006c68 0%, #005a5a 100%);
+}
+
+/* Equals button with special styling */
+.calculator-button.equals {
+  background: linear-gradient(135deg, #00703c 0%, #005a32 100%);
+  color: white;
+  border: none;
+}
+
+.calculator-button.equals:hover {
+  background: linear-gradient(135deg, #005a32 0%, #004a2b 100%);
+}
+
+/* Memory buttons */
+.calculator-button.memory {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  border: none;
+}
+
+.calculator-button.memory:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+/* Clear button */
+.calculator-button.clear {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+}
+
+.calculator-button.clear:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+/* Enhanced ripple effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Shake animation for errors */
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+
+/* History section improvements */
+.calculator-history {
+  border-top: 2px solid #e5e7eb;
+  max-height: 30%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.calculator-history::-webkit-scrollbar {
+  width: 6px;
+}
+
+.calculator-history::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.calculator-history::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+}
+
+.dark .calculator-history {
+  border-color: #4b5563;
+  scrollbar-color: #4b5563 transparent;
+}
+
+.dark .calculator-history::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+}
+
+/* Responsive design improvements */
+@media (max-width: 640px) {
+  .calculator-container[data-mode="floating"],
+  .calculator-container[data-mode="draggable"] {
+    max-width: 95vw;
+    max-height: 80vh;
+    margin: 1rem auto;
+  }
+  
+  .calculator-button {
+    font-size: 1.125rem;
+    padding: 0.875rem 0;
+  }
+  
+  .calculator-display {
+    min-height: 4rem;
+  }
+  
+  .calculator-display-value {
+    font-size: 1.75rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .calculator-container {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .calculator-display {
+    border-bottom: 1px solid #000;
+  }
+}

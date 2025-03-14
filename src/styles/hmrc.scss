@@ -1,0 +1,336 @@
+// Import HMRC Frontend styles
+@use "sass:math";
+
+// Import GOV.UK Frontend styles
+@import "govuk-frontend/dist/govuk/all";
+
+// Theme transition
+:root {
+  --theme-transition-duration: 200ms;
+  --sidebar-width: 16rem;
+  --sidebar-collapsed-width: 4rem;
+  --scrollbar-width: 12px;
+  --scrollbar-track-color: rgba(0, 0, 0, 0.05);
+  --scrollbar-thumb-color: rgba(0, 132, 118, 0.3);
+  --scrollbar-thumb-hover-color: rgba(0, 132, 118, 0.5);
+}
+
+// Global scrollbar styles
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+
+  &:hover {
+    background-color: var(--scrollbar-thumb-hover-color);
+  }
+}
+
+body {
+  transition: all var(--theme-transition-duration) ease-in-out;
+}
+
+// Dark mode styles
+.dark {
+  --scrollbar-track-color: rgba(255, 255, 255, 0.05);
+  --scrollbar-thumb-color: rgba(0, 132, 118, 0.4);
+  --scrollbar-thumb-hover-color: rgba(0, 132, 118, 0.6);
+
+  background-color: #1a1a1a;
+  color: #ffffff;
+
+  // Card styles
+  .bg-white {
+    background-color: #2d2d2d;
+  }
+
+  // Text colors
+  .text-gray-900 {
+    color: #ffffff;
+  }
+
+  .text-gray-700 {
+    color: #e5e7eb;
+  }
+
+  .text-gray-600 {
+    color: #d1d5db;
+  }
+
+  .text-gray-500 {
+    color: #9ca3af;
+  }
+
+  .text-gray-400 {
+    color: #6b7280;
+  }
+
+  // Border colors
+  .border-gray-200 {
+    border-color: #374151;
+  }
+
+  .border-gray-300 {
+    border-color: #4b5563;
+  }
+
+  // Input styles
+  input, select, textarea {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #ffffff;
+
+    &::placeholder {
+      color: #6b7280;
+    }
+
+    &:focus {
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    }
+  }
+
+  // Button styles
+  button {
+    &.bg-white {
+      background-color: #2d2d2d;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #404040;
+      }
+    }
+  }
+}
+
+// Override any styles as needed
+.hmrc-banner {
+  background-color: #008476;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hmrc-organisation-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  
+  p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+  
+  svg {
+    fill: #ffffff;
+    min-width: 42px;
+    min-height: 42px;
+    width: 42px;
+    height: 42px;
+    display: block;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  }
+}
+
+// Fix for SVG rendering issues
+.hmrc-crown-logo path {
+  fill: #ffffff !important;
+}
+
+// SVG specific styles
+.cls-1 {
+  fill: #ffffff;
+  stroke: none;
+}
+
+// Layout adjustments
+.main-content {
+  transition: margin-left var(--theme-transition-duration) ease-in-out;
+  
+  @media (min-width: 768px) {
+    margin-left: var(--sidebar-width);
+    
+    &.sidebar-collapsed {
+      margin-left: var(--sidebar-collapsed-width);
+    }
+  }
+}
+
+// Sidebar styles
+.sidebar {
+  width: var(--sidebar-width);
+  transition: all var(--theme-transition-duration) ease-in-out;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  
+  &.collapsed {
+    width: var(--sidebar-collapsed-width);
+  }
+  
+  @media (max-width: 767px) {
+    transform: translateX(-100%);
+    
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+// Fixed tools adjustments
+.fixed-tools {
+  z-index: 70;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  button {
+    transform-origin: center;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+    
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+// Touch-friendly adjustments
+@media (hover: none) {
+  .sidebar-item {
+    min-height: 48px;
+  }
+  
+  .theme-toggle {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+// Specific scrollbar styles for sidebar
+.sidebar {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+// Specific scrollbar styles for tables and code blocks
+.overflow-x-auto,
+.overflow-y-auto,
+pre,
+code {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+
+    &:hover {
+      background-color: var(--scrollbar-thumb-hover-color);
+    }
+  }
+}
+
+// Enhanced card styles
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+  
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+// Enhanced button styles
+.button {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+  }
+  
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+// Enhanced input styles
+.input {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+  
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(0, 132, 118, 0.2);
+  }
+}
+
+// Enhanced table styles
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  
+  th, td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
